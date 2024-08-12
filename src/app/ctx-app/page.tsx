@@ -10,7 +10,9 @@ export default function ContextApp() {
         alignItems: "center",
       }}
     >
-      <h1 className="m-8 text-xl font-bold">TODOS APP WITH CONTEXT</h1>
+      <h1 data-testid="app-title" className="m-8 text-xl font-bold">
+        TODOS APP WITH CONTEXT
+      </h1>
       <div
         style={{
           display: "flex",

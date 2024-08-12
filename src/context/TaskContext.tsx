@@ -26,13 +26,7 @@ export const TaskContextProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [taskList, setTaskList] = useState<TaskType[]>([
-    {
-      id: "1",
-      title: "Initial task",
-      isCompleted: false,
-    },
-  ]);
+  const [taskList, setTaskList] = useState<TaskType[]>([]);
 
   const addTask = (title: string) => {
     setTaskList((prevState) => {
@@ -68,7 +62,7 @@ export const TaskContextProvider = ({
     taskList,
     addTask,
     deleteTask,
-    completeTask
+    completeTask,
   };
 
   return <TaskContext.Provider value={value}>{children}</TaskContext.Provider>;

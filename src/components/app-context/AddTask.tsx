@@ -19,6 +19,7 @@ export default function AddTask() {
       }}
     >
       <Input
+        data-testid="task-input"
         name="title"
         required
         placeholder="Enter a new task"
@@ -26,8 +27,9 @@ export default function AddTask() {
         onChange={(event) => {
           setTaskTitle(event.target.value);
         }}
-      />
+        />
       <Button
+        data-testid="task-btn"
         variant="solid"
         color="secondary"
         disabled={taskTitle === ""}
